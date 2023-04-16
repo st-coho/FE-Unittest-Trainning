@@ -25,4 +25,3 @@ export const isAscNumArray = (arr) => {
 	}
 	return true;
 };
-
