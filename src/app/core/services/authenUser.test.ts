@@ -4,7 +4,7 @@ import { AuthenUser } from './authenUser.service';
 
 describe('AuthenUser', () => {
 	const authenUser = new AuthenUser();
-	
+
 	it('logIn called', () => {
 		const setTokenMocks = jest.spyOn(AuthStorageService.prototype, 'setToken');
 		const token = 'token';
@@ -23,7 +23,7 @@ describe('AuthenUser', () => {
 	});
 
 	it('getUser called', () => {
-		const getTokenMocks = jest.spyOn(AuthStorageService.prototype, 'getToken')
+		const getTokenMocks = jest.spyOn(AuthStorageService.prototype, 'getToken');
 		authenUser.getUser();
 		expect(getTokenMocks).toBeCalled();
 		expect(getTokenMocks).toBeCalledTimes(1);
